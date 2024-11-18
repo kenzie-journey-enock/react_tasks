@@ -1,3 +1,3 @@
 # React Tasks
 
-This repository has all the tasks I accomplished learning about the React library.
+This repository contains all my react studies carried out at Kenzie Academy.
