@@ -1,0 +1,97 @@
+
+button {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid;
+  padding: 1rem 0.5rem;
+  font-weight: 400;
+}
+
+.btn_header {
+  color: var(--grey-4);
+  border: 2px solid transparent;
+  background-color: transparent;
+}
+.btn_header:hover {
+  color: var(--grey-0);
+  border: 2px solid var(--grey-4);
+  background-color: var(--grey-4);
+}
+
+.btn_primary {
+  background-color: var(--color-primary);
+  color: var(--grey-0);
+  border: 2px solid var(--color-primary);
+}
+
+.btn_primary:hover {
+  background-color: var(--color-primary-50);
+  border: 2px solid var(--color-primary-50);
+}
+
+.btn_secoundary {
+  background-color: var(--grey-4);
+  color: var(--grey-0);
+  border: 2px solid var(--grey-4);
+}
+
+.btn_secoundary:hover {
+  background-color: var(--grey-0);
+  border: 2px solid var(--grey-4);
+  color: var(--grey-4);
+}
+
+.txt_title1 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 47.5px;
+}
+
+.txt_title2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 40px;
+}
+
+.txt_title3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 28.6px;
+}
+
+.txt_title4 {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 23.4px;
+}
+
+.txt_headline {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 28px;
+}
+
+.txt_body {
+  font-weight: 400;
+  font-size: 0.87rem;
+  line-height: 21px;
+}
+
+.txt_caption {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 18px;
+}
+
+.txt_caption_bold {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 18px;
+}
+
+.txt_detail {
+  font-weight: 400;
+  font-size: 0.65rem;
+  line-height: 20px;
+}

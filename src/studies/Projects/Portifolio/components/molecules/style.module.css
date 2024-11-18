@@ -1,0 +1,21 @@
+.list_sections {
+  display: none;
+}
+
+.list_sections_open {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Para tablets (largura mínima de 768px) */
+@media (min-width: 768px) {
+  .list_sections {
+    display: flex;
+  }
+}
+
+/* Para desktops (largura mínima de 1024px) */
+@media (min-width: 1024px) {
+  
+}
