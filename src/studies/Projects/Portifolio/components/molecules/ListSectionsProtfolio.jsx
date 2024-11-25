@@ -14,7 +14,7 @@ export default function ListSectionsPortfolio({data}) {
   return (
     <ul className={style.list_sections}>
       {data.sections.map((section) => (
-        <li key={section.id}>
+        <li key={section.id} className={style.list_item}>
           <BtnPortfolio styleToken='header'>{section.name}</BtnPortfolio>
         </li>
       ))}
