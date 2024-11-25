@@ -1,4 +1,10 @@
 .header_portfolio {
   display: flex;
   justify-content: space-between;
+  border-bottom: 2px solid rgb(199, 196, 196, 1);
+  padding: 1rem;
+}
+
+.main_portfolio {
+  background-color: aqua;
 }
