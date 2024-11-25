@@ -1,10 +1,9 @@
-// import BtnPortifolio from "./components/atoms/BtnPortfolio";
-// import TextPortfolio from "./components/atoms/TextPortfolio";
 import { useState } from 'react';
 
 import HeaderPortifolio from "./components/organisms/HeaderPortfolio";
 
 import data from './data_profile.json'
+import MainPortfolio from './components/organisms/MainPortfolio';
 
 export default function Portifolio(){
   const [dataProfile] = useState(data);
@@ -12,6 +11,7 @@ export default function Portifolio(){
   return (
     <>
       <HeaderPortifolio data={dataProfile} />
+      <MainPortfolio />
     </>
   )
 }
