@@ -2,6 +2,11 @@
   display: none;
 }
 
+.list_item {
+  margin: 1rem;
+  width: 6.5rem;
+}
+
 .list_sections_open {
   display: flex;
   flex-direction: column;
@@ -12,6 +17,7 @@
 @media (min-width: 768px) {
   .list_sections {
     display: flex;
+
   }
 }
 
