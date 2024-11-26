@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types'
+
+import style from './style.module.css'
 import TextPortfolio from "../atoms/TextPortfolio";
 
-import PropTypes from 'prop-types'
 
 
 export default function LogoTitlePortfolio({data}) {
@@ -9,7 +11,10 @@ export default function LogoTitlePortfolio({data}) {
   }
 
   return (
-    <TextPortfolio styleToken='title1'>{data.name}</TextPortfolio>
+    <div className={style.logo_wrapper}>
+      <TextPortfolio styleToken='title1' moreClassStyled={style.logo}>{data.name}</TextPortfolio>
+      <TextPortfolio styleToken='title1' >code</TextPortfolio>
+    </div>
   )
 }
 
