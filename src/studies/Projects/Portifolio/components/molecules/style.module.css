@@ -1,23 +1,41 @@
-.list_sections {
-  display: none;
+.logo_wrapper {
+  display: flex;
+  padding: 1rem 0 1rem 1rem;
+}
+.logo {
+  color: var(--color-primary);
+  margin: 0 0.6rem 0rem 0;
 }
 
-.list_item {
-  margin: 1rem;
-  width: 6.5rem;
+.list_sections {
+  display: none;
 }
 
 .list_sections_open {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  top: 80px;
+  visibility: visible;
+  position: absolute;
+  z-index: 2;
+  background-color: var(--grey-2);
+  width: 100%;
 }
 
+.list_item {
+  width: 6.5rem;
+}
 
 /* Para tablets (largura mínima de 768px) */
 @media (min-width: 768px) {
   .list_sections {
     display: flex;
+    margin: 1rem 0 0 0;
+  }
 
+  .list_sections_open {
+    visibility: hidden;
   }
 }
 
