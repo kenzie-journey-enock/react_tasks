@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 
 import TextPortfolio from "./TextPortfolio";
 
-export default function TitlePortfolio({ children }) {
+export default function TitlePortfolio({ children, styleMKT }) {
   return (
-    <TextPortfolio styleToken={'title1'} moreClassStyled={style.title_brand} >{children}</TextPortfolio>
+    <TextPortfolio styleToken={'title1'} moreClassStyled={`${style.title_brand} ${styleMKT}`}>{children}</TextPortfolio>
   )
 }
 
 TitlePortfolio.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  styleMKT: PropTypes.string
 }
