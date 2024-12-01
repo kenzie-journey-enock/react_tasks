@@ -11,7 +11,7 @@ export default function Portifolio(){
   return (
     <>
       <HeaderPortifolio data={dataProfile} />
-      <MainPortfolio />
+      <MainPortfolio data={dataProfile} />
     </>
   )
 }
