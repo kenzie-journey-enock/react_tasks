@@ -1,8 +1,8 @@
 import style from './style.module.css'
 import PropTypes from 'prop-types'
 
-import AdvertMePortfolio from '../molecules/AdvertMePortfolio'
-import BannerProjectsPortfolio from '../atoms/BannerProjectsPortfolio'
+import AdvertMePortfolio from '../boxes/AdvertMePortfolio'
+import BannerProjectsPortfolio from '../../atoms/BannerProjectsPortfolio'
 
 export default function FirstSectionPortfolio({ data }) {
   return (

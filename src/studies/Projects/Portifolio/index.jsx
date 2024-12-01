@@ -1,11 +1,15 @@
+import './styles/globalStyles.css'
+
 import { useState } from 'react';
 
-import HeaderPortifolio from "./components/organisms/HeaderPortfolio";
-
 import data from './data_profile.json'
-import MainPortfolio from './components/organisms/MainPortfolio';
 
-export default function Portifolio(){
+import {
+  HeaderPortifolio,
+  MainPortfolio
+} from "./components/organisms";
+
+export default function Portifolio() {
   const [dataProfile] = useState(data);
 
   return (

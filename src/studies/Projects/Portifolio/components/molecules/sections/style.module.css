@@ -1,0 +1,13 @@
+.first_section {
+  display: flex;
+}
+
+.secound_section {
+  display: flex;
+}
+
+/* Para tablets (largura mínima de 768px) */
+@media (min-width: 900px) {}
+
+/* Para desktops (largura mínima de 1024px) */
+@media (min-width: 1024px) {}

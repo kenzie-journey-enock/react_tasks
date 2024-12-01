@@ -3,10 +3,10 @@ import parse from "html-react-parser";
 
 import style from './style.module.css'
 
-import AvatarPortfolio from '../atoms/AvatarPortfolio';
-import TitlePortfolio from '../atoms/TitlePortfolio'
-import TextPortfolio from '../atoms/TextPortfolio'
-import BtnPortifolio from '../atoms/BtnPortfolio';
+import AvatarPortfolio from '../../atoms/AvatarPortfolio';
+import TitlePortfolio from '../../atoms/TitlePortfolio'
+import TextPortfolio from '../../atoms/TextPortfolio'
+import BtnPortifolio from '../../atoms/BtnPortfolio';
 
 export default function AdvertMePortfolio({ data }) {
   return (

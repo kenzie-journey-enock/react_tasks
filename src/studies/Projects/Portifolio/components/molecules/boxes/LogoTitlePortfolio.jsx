@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 
 import style from './style.module.css'
-import TextPortfolio from "../atoms/TextPortfolio";
+import TextPortfolio from "../../atoms/TextPortfolio";
 
 
 
-export default function LogoTitlePortfolio({data}) {
+export default function LogoTitlePortfolio({ data }) {
   if (!data || !data.name) {
     return <p>Carregando...</p>;
   }

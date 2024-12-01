@@ -1,6 +1,6 @@
-import './styles/globalStyles.css'
-
-import Portifolio from './studies/Projects/Portifolio'
+import {
+  Portifolio
+} from './studies/Projects'
 // import MyFirstJSX from "./studies/Tasks/01_MyFirstJSX/MyFirstJSX"
 // import MyFirstComponents from "./studies/Tasks/02_MyFirstComponents"
 // import PeopleList from "./studies/Tasks/03_PeopleCard/PeopleList"
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-     {/* <h1>React Tasks</h1> */}
+      {/* <h1>React Tasks</h1> */}
       {/* <DefaultTemplate>
         <TeacherCardModulesCSS />
         <FruitsList />

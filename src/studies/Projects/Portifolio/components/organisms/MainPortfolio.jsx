@@ -1,12 +1,16 @@
 import style from './style.module.css'
 import PropTypes from 'prop-types'
 
-import FirstSectionPortfolio from '../molecules/FirstSectionPortfolio'
+import {
+  FirstSectionPortfolio,
+  SecoundSectionPortfolio
+} from '../molecules/sections'
 
 export default function MainPortfolio({ data }) {
   return (
     <main className={style.main_portfolio}>
       <FirstSectionPortfolio data={data} />
+      <SecoundSectionPortfolio data={data} />
     </main>
   )
 }
