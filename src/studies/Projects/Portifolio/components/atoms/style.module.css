@@ -1,4 +1,3 @@
-
 button {
   width: 100%;
   border-radius: 8px;
@@ -12,6 +11,7 @@ button {
   border: 2px solid transparent;
   background-color: transparent;
 }
+
 .btn_header:hover {
   color: var(--grey-0);
   border: 2px solid var(--grey-4);
@@ -95,20 +95,42 @@ button {
   line-height: 20px;
 }
 
-
 .title_brand strong {
   color: var(--color-primary);
 }
 
+.title_brand strong {
+  position: relative;
+  color: var(--color-primary);
+}
+
+.title_brand strong::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.title_brand strong:hover::after {
+  transform: scaleX(1);
+}
+
 .avatar_wrapper {
   width: 100%;
-  height: 85px;
+  height: 100%;
   background-color: var(--color-primary);
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0rem 0rem 0.5rem;
+  padding: 0.5rem;
   margin-bottom: 4rem;
 }
 
@@ -117,7 +139,7 @@ button {
   height: 70px;
 }
 
-.avatar_element img{
+.avatar_element img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -140,9 +162,13 @@ button {
   margin: 1rem 1rem 0 1rem;
 }
 
+.banner_projects {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .avatar_wrapper {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -150,22 +176,35 @@ button {
   .menu_icon {
     display: none;
   }
+
+  .banner_projects {
+    display: flex;
+    width: 50%;
+  }
+
+  .banner_projects img {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    top: 11%;
+    right: 0%;
+  }
 }
 
 @media (min-width: 1024px) {
   .avatar_wrapper {
-    width: 40%;
+    width: 60%;
   }
 }
 
 @media (min-width: 1160px) {
   .avatar_wrapper {
-    width: 30%;
+    width: 50%;
   }
 }
 
 @media (min-width: 1600px) {
   .avatar_wrapper {
-    width: 20%;
+    width: 50%;
   }
 }
