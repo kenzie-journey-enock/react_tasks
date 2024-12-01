@@ -1,14 +1,20 @@
 import style from './style.module.css'
 
-import TitlePortfolio from '../atoms/TitlePortfolio'
 import AvatarPortfolio from '../atoms/AvatarPortfolio'
-// import PropTypes from 'prop-types'
+import AdvertMePortfolio from '../molecules/AdvertMePortfolio'
+import PropTypes from 'prop-types'
 
-export default function MainPortfolio(){
+export default function MainPortfolio({data}){
   return (
     <main className={style.main_portfolio}>
-      <AvatarPortfolio name='Enock' src='https://picsum.photos/536/354'/>
-      <TitlePortfolio>Bla bla <strong>Coisa e tal</strong></TitlePortfolio>
+      <section className={style.first_s}>
+        <AvatarPortfolio name={data.name} src='https://picsum.photos/536/354'/>
+        <AdvertMePortfolio data={data} />
+      </section>
     </main>
   )
+}
+
+MainPortfolio.propTypes = {
+  data: PropTypes.object
 }
