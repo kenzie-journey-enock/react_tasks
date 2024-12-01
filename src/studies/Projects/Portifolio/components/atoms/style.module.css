@@ -97,18 +97,19 @@ button {
 
 
 .title_brand strong {
-  color: pink;
+  color: var(--color-primary);
 }
 
 .avatar_wrapper {
   width: 100%;
   height: 85px;
-  background-color: blueviolet;
+  background-color: var(--color-primary);
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 0rem 0rem 0.5rem;
+  margin-bottom: 4rem;
 }
 
 .avatar_element {
@@ -143,6 +144,9 @@ button {
   .avatar_wrapper {
     width: 50%;
   }
+}
+
+@media (min-width: 900px) {
   .menu_icon {
     display: none;
   }
