@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 
 import TextPortfolio from './TextPortfolio'
 
-export default function AvatarPortfolio({ name, src }){
+import rocketIcon from '../../assets/rocket_icon.png'
+
+export default function AvatarPortfolio({ name, src }) {
 
   return (
     <div className={style.avatar_wrapper}>
@@ -12,7 +14,7 @@ export default function AvatarPortfolio({ name, src }){
       </div>
       <TextPortfolio styleToken='body' moreClassStyled={style.avatar_text}>Hay my name is {name}</TextPortfolio>
       <div className={style.avatar_icon_rocket}>
-        <img alt={`Icon of a rocket`} src='src/assets/rocket_icon.png' />
+        <img alt={`Icon of a rocket`} src={rocketIcon} />
       </div>
     </div>
   )

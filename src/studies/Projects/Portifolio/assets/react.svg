@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+  width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="FaceGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#41D1FF"></stop>
+      <stop offset="100%" stop-color="#BD34FE"></stop>
+    </linearGradient>
+    <linearGradient id="MouthGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFEA83"></stop>
+      <stop offset="100%" stop-color="#FFA800"></stop>
+    </linearGradient>
+  </defs>
+  <!-- Face -->
+  <circle cx="128" cy="128" r="120" fill="url(#FaceGradient)" />
+  <!-- Eyes -->
+  <circle cx="88" cy="100" r="12" fill="#FFFFFF" />
+  <circle cx="168" cy="100" r="12" fill="#FFFFFF" />
+  <!-- Smile -->
+  <path d="M88 160 Q128 200 168 160" stroke="url(#MouthGradient)" stroke-width="8" fill="none" stroke-linecap="round" />
+</svg>
