@@ -14,7 +14,7 @@ export default function AvatarPortfolio({ name, src }) {
       </div>
       <TextPortfolio styleToken='body' moreClassStyled={style.avatar_text}>Hay my name is {name}</TextPortfolio>
       <div className={style.avatar_icon_rocket}>
-        <img alt={`Icon of a rocket`} src={rocketIcon} />
+        <img alt='Icon of a rocket' src={rocketIcon} />
       </div>
     </div>
   )
