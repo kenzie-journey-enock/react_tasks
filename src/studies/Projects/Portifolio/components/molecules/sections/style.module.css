@@ -1,9 +1,11 @@
 .first_section {
   display: flex;
+  padding: 10%;
 }
 
 .secound_section {
   display: flex;
+  background-color: brown;
 }
 
 /* Para tablets (largura mínima de 768px) */

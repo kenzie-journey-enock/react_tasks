@@ -82,6 +82,11 @@
   }
 }
 
+.my_projects {
+  display: flex;
+  background-color: aqua;
+}
+
 
 /* Para tablets (largura mínima de 768px) */
 @media (min-width: 900px) {
