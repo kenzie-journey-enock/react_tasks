@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 import {
   FirstSectionPortfolio,
-  SecoundSectionPortfolio
+  SecoundSectionPortfolio,
+  ThirdSectionPortfolio
 } from '../molecules/sections'
 
 export default function MainPortfolio({ data }) {
@@ -11,6 +12,7 @@ export default function MainPortfolio({ data }) {
     <main className={style.main_portfolio}>
       <FirstSectionPortfolio data={data} />
       <SecoundSectionPortfolio data={data} />
+      <ThirdSectionPortfolio data={data} />
     </main>
   )
 }
