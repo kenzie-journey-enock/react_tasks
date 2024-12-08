@@ -5,23 +5,71 @@
   "sections": [
     {
       "id": 1,
-      "name": "Home"
+      "name": "Home",
+      "ref": "home"
     },
     {
       "id": 2,
-      "name": "Projects"
+      "name": "Projects",
+      "ref": "projects"
     },
     {
       "id": 3,
-      "name": "Contacts"
+      "name": "Contacts",
+      "ref": "contacts"
     },
     {
       "id": 4,
-      "name": "Digital Midias"
+      "name": "Digital Midias",
+      "ref": "digital_midias"
     }
   ],
   "advert_me": {
     "call": "I <strong>love</strong> creating and <strong>developing</strong> projects",
     "action": "Discover here in this environment, created especially for you, all my projects and technologies"
-  }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "img_url": "",
+      "name": "Kenzie Food",
+      "link_repo": "",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "img_url": "",
+      "name": "Weartake",
+      "link_repo": "",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "img_url": "",
+      "name": "Image Search",
+      "link_repo": "",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "img_url": "",
+      "name": "Objective Task",
+      "link_repo": "",
+      "description": ""
+    },
+    {
+      "id": 5,
+      "img_url": "",
+      "name": "Objective Task",
+      "link_repo": "",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "img_url": "",
+      "name": "Objective Task",
+      "link_repo": "",
+      "description": ""
+    }
+  ]
 }
