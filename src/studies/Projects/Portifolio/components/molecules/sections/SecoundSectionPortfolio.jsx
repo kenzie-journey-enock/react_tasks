@@ -5,7 +5,7 @@ import { MyProjectsPortfolio } from '../boxes'
 
 export default function SecoundSectionPortfolio({ data }) {
   return (
-    <section className={style.secound_section}>
+    <section id={data.sections[1].ref} className={style.secound_section}>
       <MyProjectsPortfolio data={data} />
     </section>
   )

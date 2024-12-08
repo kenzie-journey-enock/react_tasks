@@ -11,11 +11,20 @@ export default function ListSectionsPortfolio({ data, openMenu }) {
     return <p>Carregando...</p>;
   }
 
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    console.log(sectionId)
+    if (section) {
+      console.log(section)
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <ul className={openMenu ? style.list_sections_open : style.list_sections}>
       {data.sections.map((section) => (
         <li key={section.id} className={style.list_item}>
-          <BtnPortfolio styleToken='header'>{section.name}</BtnPortfolio>
+          <BtnPortfolio onClick={() => handleScroll(section.ref)} styleToken='header'>{section.name}</BtnPortfolio>
         </li>
       ))}
     </ul>

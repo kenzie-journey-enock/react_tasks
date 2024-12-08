@@ -6,7 +6,7 @@ import BannerProjectsPortfolio from '../../atoms/BannerProjectsPortfolio'
 
 export default function FirstSectionPortfolio({ data }) {
   return (
-    <section className={style.first_section}>
+    <section id={data.sections[0].ref} className={style.first_section}>
       <AdvertMePortfolio data={data} />
       <BannerProjectsPortfolio />
     </section>

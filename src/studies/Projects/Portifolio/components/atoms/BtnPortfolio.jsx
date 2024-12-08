@@ -2,9 +2,9 @@ import style from "./style.module.css"
 
 import PropTypes from 'prop-types'
 
-export default function BtnPortifolio({ children, styleToken, colorBg, hoverColorBg }) {
+export default function BtnPortifolio({ children, styleToken, colorBg, hoverColorBg, onClick }) {
   return (
-    <button className={setStyleClass(styleToken, style)} style={{
+    <button onClick={onClick} className={setStyleClass(styleToken, style)} style={{
       backgroundColor: colorBg,
       transition: 'background-color 0.3s, color 0.3s, border 0.6s'
     }}
@@ -24,7 +24,8 @@ BtnPortifolio.propTypes = {
   children: PropTypes.node,
   styleToken: PropTypes.string,
   colorBg: PropTypes.string,
-  hoverColorBg: PropTypes.string
+  hoverColorBg: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 
