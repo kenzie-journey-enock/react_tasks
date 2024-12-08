@@ -204,9 +204,31 @@ button {
   display: none;
 }
 
+.card_project {
+  width: 20rem;
+  margin: 1rem 0 0 0;
+  /* background-color: blanchedalmond; */
+}
+
+.info_project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: aqua; */
+  width: 98%;
+}
+
 @media (min-width: 768px) {
   .avatar_wrapper {
     width: 100%;
+  }
+
+  .card_project {
+    width: 26rem;
+  }
+
+  .info_project {
+    width: 75%;
   }
 }
 
