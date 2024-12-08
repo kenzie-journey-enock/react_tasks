@@ -5,7 +5,14 @@
 
 .secound_section {
   display: flex;
-  background-color: brown;
+  background-color: var(--grey-1);
+  padding: 10%;
+}
+
+.third_section {
+  display: flex;
+  /* background-color: var(--grey-0); */
+  padding: 10%;
 }
 
 /* Para tablets (largura mínima de 768px) */
