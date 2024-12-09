@@ -28,6 +28,10 @@
     "call": "I <strong>love</strong> creating and <strong>developing</strong> projects",
     "action": "Discover here in this environment, created especially for you, all my projects and technologies"
   },
+  "call_me": {
+    "call": "Let's set up a conversation and <strong>develop our creativity</strong> together?",
+    "action": "Increase your brand visibility organically with me. Let's talk!"
+  },
   "projects": [
     {
       "id": 1,
