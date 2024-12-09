@@ -2,12 +2,24 @@ import style from "./style.module.css"
 
 import PropTypes from 'prop-types'
 
-export default function BtnPortifolio({ children, styleToken, colorBg, hoverColorBg, onClick }) {
+export default function BtnPortifolio(
+  {
+    children,
+    styleToken,
+    colorBg,
+    hoverColorBg,
+    onClick,
+    type
+  }) {
   return (
-    <button onClick={onClick} className={setStyleClass(styleToken, style)} style={{
-      backgroundColor: colorBg,
-      transition: 'background-color 0.3s, color 0.3s, border 0.6s'
-    }}
+    <button
+      type={type}
+      onClick={onClick}
+      className={setStyleClass(styleToken, style)}
+      style={{
+        backgroundColor: colorBg,
+        transition: 'background-color 0.3s, color 0.3s, border 0.6s'
+      }}
       onMouseEnter={(e) => {
         e.currentTarget.style.backgroundColor = hoverColorBg;
       }}
@@ -15,7 +27,7 @@ export default function BtnPortifolio({ children, styleToken, colorBg, hoverColo
         e.currentTarget.style.backgroundColor = colorBg;
       }}
     >
-      {children ? children : 'Vazio'}
+      {children ? children : 'Empty'}
     </button>
   )
 }
@@ -25,7 +37,8 @@ BtnPortifolio.propTypes = {
   styleToken: PropTypes.string,
   colorBg: PropTypes.string,
   hoverColorBg: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  type: PropTypes.string
 };
 
 
