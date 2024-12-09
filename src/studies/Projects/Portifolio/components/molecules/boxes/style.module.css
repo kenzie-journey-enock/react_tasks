@@ -97,6 +97,10 @@
   /* margin: -1rem; */
 }
 
+.info_contact_me {
+  margin-bottom: 1.5rem;
+}
+
 
 /* Para tablets (largura mínima de 768px) */
 @media (min-width: 900px) {
@@ -117,8 +121,8 @@
     justify-content: left;
   }
 
-  .list_my_projects {
-    /* margin: 0 -0.5rem; */
+  .contact_me {
+    width: 50%;
   }
 }
 

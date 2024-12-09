@@ -218,6 +218,36 @@ button {
   width: 98%;
 }
 
+.input_email {
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input_email label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.input_email input {
+  background-color: var(--grey-4);
+  color: var(--grey-0);
+  border: 2px solid var(--grey-4);
+  border-radius: 4px;
+  padding: 0.8rem 0.5rem;
+}
+
+.input_email input::placeholder {
+  color: var(--grey-3);
+}
+
+.input_email span {
+  color: var(--grey-3);
+  font-size: 0.6rem;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 768px) {
   .avatar_wrapper {
     width: 100%;
@@ -251,9 +281,34 @@ button {
   }
 }
 
+.me_pixel_art {
+  width: 100%;
+  height: 100%;
+}
+
+.me_pixel_art img {
+  width: 100%;
+  height: 60%;
+}
+
+
 @media (min-width: 1024px) {
   .avatar_wrapper {
     width: 60%;
+  }
+
+  .me_pixel_art {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 43%;
+    left: 74%;
+  }
+
+  .me_pixel_art img {
+    width: 30%;
+    height: 60%;
   }
 }
 
