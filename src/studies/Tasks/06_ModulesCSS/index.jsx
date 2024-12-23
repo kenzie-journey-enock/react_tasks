@@ -1,5 +1,5 @@
-import TeacherCard from "./TeacherCard";
+import ModulesCSS from './TeacherCardModulesCSS'
 
-export default function TeacherCardModulesCSS() {
-  return <TeacherCard />
+export {
+  ModulesCSS
 }
