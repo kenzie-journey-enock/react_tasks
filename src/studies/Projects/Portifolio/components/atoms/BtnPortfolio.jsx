@@ -1,5 +1,4 @@
 import style from "./style.module.css"
-
 import PropTypes from 'prop-types'
 
 export default function BtnPortifolio(
@@ -40,7 +39,6 @@ BtnPortifolio.propTypes = {
   onClick: PropTypes.func,
   type: PropTypes.string
 };
-
 
 function setStyleClass(styleToken, style) {
   if (styleToken == 'primary') return style.btn_primary

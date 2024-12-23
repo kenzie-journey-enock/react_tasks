@@ -1,7 +1,6 @@
+import style from './style.module.css'
 import PropTypes from 'prop-types'
 import parse from "html-react-parser"
-
-import style from './style.module.css'
 
 import TitlePortfolio from '../../atoms/TitlePortfolio'
 import TextPortfolio from '../../atoms/TextPortfolio'

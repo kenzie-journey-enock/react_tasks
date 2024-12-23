@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import style from "./style.module.css"
+import PropTypes from 'prop-types'
 
 export default function MePixelPortfolio({ imgURL, alt }) {
   return (
