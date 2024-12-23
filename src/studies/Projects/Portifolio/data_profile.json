@@ -75,5 +75,19 @@
       "link_repo": "",
       "description": ""
     }
+  ],
+  "social_midias": [
+    {
+      "id": 1,
+      "name": "instagram"
+    },
+    {
+      "id": 2,
+      "name": "linkedin"
+    },
+    {
+      "id": 3,
+      "name": "twitch"
+    }
   ]
 }
