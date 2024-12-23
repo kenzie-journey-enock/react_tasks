@@ -160,6 +160,18 @@ button {
   transform: scaleX(1);
 }
 
+.icon_wrapper {
+  width: 100px;
+  color: white;
+  padding: 5%;
+}
+
+.icon_wrapper img {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
 .avatar_wrapper {
   width: 100%;
   height: 100%;
@@ -186,7 +198,6 @@ button {
 .avatar_text {
   display: flex;
   color: #fff;
-  /* margin: 0 0 0 0.5rem; */
 }
 
 .avatar_icon_rocket {
@@ -207,19 +218,16 @@ button {
 .card_project {
   width: 20rem;
   margin: 1rem 0 0 0;
-  /* background-color: blanchedalmond; */
 }
 
 .info_project {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: aqua; */
   width: 98%;
 }
 
 .input_email {
-  /* background-color: blueviolet; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -247,6 +255,43 @@ button {
   font-size: 0.6rem;
   margin-bottom: 1rem;
 }
+
+.me_pixel_art {
+  width: 100%;
+  height: 100%;
+}
+
+.me_pixel_art img {
+  width: 100%;
+  height: 60%;
+}
+
+.avatar_thanks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10%;
+
+}
+
+.avatar_thanks_text {
+  color: var(--grey-0);
+  margin-left: 1rem;
+}
+
+
+.avatar_thanks_text .txt_title3,
+a {
+  color: var(--color-tertiary);
+}
+
+.avatar_thanks_social_icons {
+  display: flex;
+  padding: 5%;
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
 
 @media (min-width: 768px) {
   .avatar_wrapper {
@@ -280,17 +325,6 @@ button {
     right: 0%;
   }
 }
-
-.me_pixel_art {
-  width: 100%;
-  height: 100%;
-}
-
-.me_pixel_art img {
-  width: 100%;
-  height: 60%;
-}
-
 
 @media (min-width: 1024px) {
   .avatar_wrapper {
