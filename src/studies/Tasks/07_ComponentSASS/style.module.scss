@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  background: black;
+  color: white;
+
+  font-family: "Rubik Vinyl", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    list-style: none;
+
+    li {
+
+      button {
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+      }
+
+      button:hover {
+        background-color: #42EF9C;
+        color: black;
+      }
+
+      &:last-child button {
+        background-color: #42EF9C;
+        color: black;
+      }
+    }
+  }
+}
