@@ -110,6 +110,10 @@ section {
 	display: block;
 }
 
+nav {
+	all: unset;
+}
+
 body {
 	line-height: 1;
 }
