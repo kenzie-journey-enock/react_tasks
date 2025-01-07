@@ -3,7 +3,11 @@
 // } from './studies/Projects'
 
 import {
-  ComponentSASS
+  ComponentSASS,
+  FruitsList,
+  RenderingSectionsConditionally,
+  StatesContactForm,
+  ConditioningVisualComponent
 } from './studies/Tasks'
 
 
@@ -13,6 +17,12 @@ function App() {
     <>
 
       <ComponentSASS />
+      <FruitsList />
+      <StatesContactForm />
+      < RenderingSectionsConditionally />
+
+      <ConditioningVisualComponent />
+
       {/* <Portifolio /> */}
     </>
   )
