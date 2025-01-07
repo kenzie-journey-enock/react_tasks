@@ -5,6 +5,10 @@ import { CreatingTemplateComponent } from './04_CreatingTemplateComponent';
 import { RenderingListFruits } from './05_RenderingListFruits';
 import { ModulesCSS } from './06_ModulesCSS';
 import { ComponentSASS } from './07_ComponentSASS';
+import { FruitsList } from './08_FruitsList';
+import { StatesContactForm } from './09_StatesContactForm';
+import { RenderingSectionsConditionally } from './10_RenderingSectionsConditionally';
+import { ConditioningVisualComponent } from './11_ConditioningVisualComponent';
 
 export {
   MyFirstJSX,
@@ -13,5 +17,10 @@ export {
   CreatingTemplateComponent,
   RenderingListFruits,
   ModulesCSS,
-  ComponentSASS
+  ComponentSASS,
+  FruitsList,
+  StatesContactForm,
+  RenderingSectionsConditionally,
+  ConditioningVisualComponent
+
 }

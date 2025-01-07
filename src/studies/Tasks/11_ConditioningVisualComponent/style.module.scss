@@ -1,0 +1,23 @@
+.card {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 8px;
+  text-align: left;
+  transition: all 0.3s ease;
+
+  h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+
+  p {
+    margin: 0;
+    color: #555;
+  }
+}
+
+.active {
+  background-color: #e0ffe0;
+  border-color: #00a000;
+}
