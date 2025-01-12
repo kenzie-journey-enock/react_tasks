@@ -1,14 +1,15 @@
-// import {
-//   Portifolio
-// } from './studies/Projects'
-
 import {
-  ComponentSASS,
-  FruitsList,
-  RenderingSectionsConditionally,
-  StatesContactForm,
-  ConditioningVisualComponent
-} from './studies/Tasks'
+  // Portifolio
+  Finok
+} from './studies/Projects'
+
+// import {
+//   ComponentSASS,
+//   FruitsList,
+//   RenderingSectionsConditionally,
+//   StatesContactForm,
+//   ConditioningVisualComponent
+// } from './studies/Tasks'
 
 
 function App() {
@@ -16,14 +17,18 @@ function App() {
   return (
     <>
 
-      <ComponentSASS />
+      {/* TASKS */}
+      {/* <ComponentSASS />
       <FruitsList />
       <StatesContactForm />
       < RenderingSectionsConditionally />
 
-      <ConditioningVisualComponent />
+      <ConditioningVisualComponent /> */}
 
       {/* <Portifolio /> */}
+      <Finok />
+
+
     </>
   )
 }
