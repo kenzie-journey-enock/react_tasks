@@ -1,23 +1,33 @@
-import style from './style.module.css'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { TxtTitle1, TxtTitle2, TxtTitle3, TxtTitle4, TxtHeadline, TxtBody, TxtCaption, TxtCaptionBold, TxtDetail } from './StyleAtoms';
 
 export default function TextFinok({ children, styleToken, moreClassStyled }) {
-
-  if (styleToken == 'title1') return <h1 className={`${style.txt_title1} ${moreClassStyled}`}>{children}</h1>
-  if (styleToken == 'title2') return <h2 className={`${style.txt_title2} ${moreClassStyled}`}>{children}</h2>
-  if (styleToken == 'title3') return <h2 className={`${style.txt_title3} ${moreClassStyled}`}>{children}</h2>
-  if (styleToken == 'title4') return <h2 className={`${style.txt_title4} ${moreClassStyled}`}>{children}</h2>
-
-  if (styleToken == 'headline') return <p className={`${style.txt_headline} ${moreClassStyled}`}>{children}</p>
-  if (styleToken == 'body') return <p className={`${style.txt_body} ${moreClassStyled}`}>{children}</p>
-  if (styleToken == 'caption') return <p className={`${style.txt_caption} ${moreClassStyled}`}>{children}</p>
-  if (styleToken == 'caption_bold') return <p className={`${style.txt_caption_bold} ${moreClassStyled}`}>{children}</p>
-  if (styleToken == 'detail') return <p className={`${style.txt_detail} ${moreClassStyled}`}>{children}</p>
-
+  switch (styleToken) {
+    case 'title1':
+      return <TxtTitle1 className={moreClassStyled}>{children}</TxtTitle1>;
+    case 'title2':
+      return <TxtTitle2 className={moreClassStyled}>{children}</TxtTitle2>;
+    case 'title3':
+      return <TxtTitle3 className={moreClassStyled}>{children}</TxtTitle3>;
+    case 'title4':
+      return <TxtTitle4 className={moreClassStyled}>{children}</TxtTitle4>;
+    case 'headline':
+      return <TxtHeadline className={moreClassStyled}>{children}</TxtHeadline>;
+    case 'body':
+      return <TxtBody className={moreClassStyled}>{children}</TxtBody>;
+    case 'caption':
+      return <TxtCaption className={moreClassStyled}>{children}</TxtCaption>;
+    case 'caption_bold':
+      return <TxtCaptionBold className={moreClassStyled}>{children}</TxtCaptionBold>;
+    case 'detail':
+      return <TxtDetail className={moreClassStyled}>{children}</TxtDetail>;
+    default:
+      return <span className={moreClassStyled}>{children}</span>;
+  }
 }
 
 TextFinok.propTypes = {
   children: PropTypes.node,
   styleToken: PropTypes.string,
-  moreClassStyled: PropTypes.string
+  moreClassStyled: PropTypes.string,
 };

@@ -1,35 +1,24 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import style from "./style.module.css"
+import { InputLabel, LabelText, SelectStyled } from './StyleAtoms';
 import TextFinok from './TextFinok';
+import formatMoney from '../../../utils/formatMoney';
 
 export default function InputLabelFinok({ type, example }) {
   const [value, setValue] = useState(type === 'money' ? 'R$1,00' : '');
 
-  const formatMoney = (rawValue) => {
-    const numericValue = parseFloat(rawValue.replace(/[^0-9]/g, '')) / 100;
-    return numericValue.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-    });
-  };
-
   const handleChange = (e) => {
     const inputValue = e.target.value;
-    if (type === 'money') {
-      setValue(formatMoney(inputValue));
-    } else {
-      setValue(inputValue);
-    }
+    setValue(type === 'money' ? formatMoney(inputValue) : inputValue);
   };
 
   return (
-    <div className={style.input_label}>
+    <InputLabel>
       {type === 'text' && (
         <div>
-          <label htmlFor="description">
+          <LabelText htmlFor="description">
             <TextFinok styleToken='caption_bold'>Descrição</TextFinok>
-          </label>
+          </LabelText>
           <input
             id="description"
             type="text"
@@ -43,9 +32,9 @@ export default function InputLabelFinok({ type, example }) {
 
       {type === 'money' && (
         <div>
-          <label htmlFor="value">
+          <LabelText htmlFor="value">
             <TextFinok styleToken='caption_bold'>Valor</TextFinok>
-          </label>
+          </LabelText>
           <input
             id="value"
             type="text"
@@ -58,16 +47,16 @@ export default function InputLabelFinok({ type, example }) {
 
       {type === 'select' && (
         <div>
-          <label htmlFor="valueType">
+          <LabelText htmlFor="valueType">
             <TextFinok styleToken='caption_bold'>Tipo de valor</TextFinok>
-          </label>
-          <select id="valueType" value={value} onChange={(e) => setValue(e.target.value)}>
+          </LabelText>
+          <SelectStyled>
             <option value="Entrada">Entrada</option>
             <option value="Saída">Saída</option>
-          </select>
+          </SelectStyled>
         </div>
       )}
-    </div>
+    </InputLabel>
   );
 }
 

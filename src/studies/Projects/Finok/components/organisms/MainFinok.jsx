@@ -1,11 +1,11 @@
-import ContainerMainFinok from '../molecules/ContainerMainFinok'
+import { MainFin } from './StyleOrganisms'
 
-import style from './style.module.css'
+import ContainerMainFinok from '../molecules/ContainerMainFinok'
 
 export default function MainFinok() {
   return (
-    <main className={style.main_finok}>
+    <MainFin>
       <ContainerMainFinok />
-    </main>
+    </MainFin>
   )
 }

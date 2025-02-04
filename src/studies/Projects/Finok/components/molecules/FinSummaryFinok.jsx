@@ -1,13 +1,16 @@
 import TextFinok from "../atoms/TextFinok";
+import FinItemFinok from "./FinItemFinok";
 
-import style from './style.module.css'
+import { FinSummary } from "./StyleMolecules";
 
 export default function FinSummaryFinok() {
   return (
-    <div className={style.fin_summary}>
+    <FinSummary>
       <TextFinok styleToken='title3'>Resumo Financeiro</TextFinok>
 
       <TextFinok styleToken='title2'>Você ainda não possui nenhum lançamento</TextFinok>
-    </div>
+
+      <FinItemFinok />
+    </FinSummary>
   )
 }

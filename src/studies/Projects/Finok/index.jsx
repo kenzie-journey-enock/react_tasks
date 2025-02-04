@@ -1,4 +1,4 @@
-import './styles/globalStyles.css'
+import GlobalStyle from './styles/globalStyles';
 
 import {
   FooterFinok,
@@ -10,6 +10,7 @@ export default function Finok() {
 
   return (
     <>
+      <GlobalStyle />
       <HeaderFinok />
       <MainFinok />
       <FooterFinok />

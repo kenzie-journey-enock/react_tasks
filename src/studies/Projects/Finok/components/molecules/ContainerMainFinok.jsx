@@ -1,13 +1,13 @@
-import style from './style.module.css'
+import { ContainerMain } from './StyleMolecules'
 
 import FinFormFinok from './FinFormFinok'
 import FinSummaryFinok from './FinSummaryFinok'
 
 export default function ContainerMainFinok() {
   return (
-    <div className={style.container_main}>
+    <ContainerMain>
       <FinFormFinok />
       <FinSummaryFinok />
-    </div>
+    </ContainerMain>
   )
 }

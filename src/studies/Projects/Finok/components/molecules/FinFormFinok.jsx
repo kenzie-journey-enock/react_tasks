@@ -1,15 +1,18 @@
-import style from "./style.module.css"
+import { FinForm } from "./StyleMolecules";
 
 import BtnFinok from "../atoms/BtnFinok";
 import InputLabelFinok from "../atoms/InputLabelFinok";
+import TextFinok from "../atoms/TextFinok";
 
 export default function FinFormFinok() {
   return (
-    <form className={style.fin_form}>
+    <FinForm>
       <InputLabelFinok type='text' example='Ex: Compra de Roupas' />
       <InputLabelFinok type='money' />
       <InputLabelFinok type='select' />
-      <BtnFinok type='submit'>Inserir Valor</BtnFinok>
-    </form>
+      <BtnFinok type='submit'>
+        <TextFinok styleToken='body'>Inserir Valor</TextFinok>
+      </BtnFinok>
+    </FinForm>
   )
 }
