@@ -1,0 +1,30 @@
+{
+  "company_name": "Finok",
+  "total": 0,
+  "resume": [
+    {
+      "id": 1,
+      "title": "Salario - Mês Janeiro",
+      "value": 3000,
+      "type": "Entrada"
+    },
+    {
+      "id": 2,
+      "title": "Salario - Mês Fevereiro",
+      "value": 3000,
+      "type": "Entrada"
+    },
+    {
+      "id": 3,
+      "title": "Salario - Mês Março",
+      "value": 3000,
+      "type": "Entrada"
+    },
+    {
+      "id": 4,
+      "title": "PC da Nasa.",
+      "value": 9000,
+      "type": "Saída"
+    }
+  ]
+}
