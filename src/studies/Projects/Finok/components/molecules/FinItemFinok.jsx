@@ -1,17 +1,28 @@
+import PropTypes from 'prop-types';
+import { FinItem } from './StyleMolecules';
+
 import TextFinok from "../atoms/TextFinok";
 import BtnDeleteFinok from "../atoms/BtnDeleteFinok";
 
-import formatMoney from "../../../utils/formatMoney";
-import data_mock from "../../data_finok.json"
+import { formatFloatToMoney } from '../../../utils/formatMoney';
 
-export default function FinItemFinok() {
+export default function FinItemFinok({ item, setItem }) {
+
+  const handleDelete = () => {
+    setItem((prevItems) => prevItems.filter((i) => i.id !== item.id));
+  };
+
   return (
-    <div>
-
-      <TextFinok styleToken='title3'>{data_mock.resume[0].title}</TextFinok>
-      <TextFinok styleToken='caption'>{data_mock.resume[0].type}</TextFinok>
-      <TextFinok styleToken='body'>{formatMoney(data_mock.resume[0].value)}</TextFinok>
-      <BtnDeleteFinok />
-    </div>
+    <FinItem type={item.type}>
+      <TextFinok styleToken='title3'>{item.title}</TextFinok>
+      <TextFinok styleToken='caption'>{item.type}</TextFinok>
+      <TextFinok styleToken='body'>{formatFloatToMoney(item.value)}</TextFinok>
+      <BtnDeleteFinok onClick={handleDelete} />
+    </FinItem>
   )
 }
+
+FinItemFinok.propTypes = {
+  item: PropTypes.object,
+  setItem: PropTypes.func.isRequired,
+};
