@@ -36,11 +36,33 @@ const GlobalStyle = createGlobalStyle`
     color: var(--grey-4);
     max-height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
+    
+    @media (min-width: 768px) {
+      overflow: hidden;
+    }
   }
 
   section {
     height: 90vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--grey-1);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-2);
   }
 `;
 
