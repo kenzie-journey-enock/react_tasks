@@ -25,7 +25,7 @@ export const ContainerMain = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 74vh;
+  height: 100%;
 
   @media (min-width: 768px) {
     width: 90%;
@@ -81,5 +81,36 @@ export const FinSummary = styled.div`
 
   @media (min-width: 1024px) {
     width: 60%;
+  }
+`;
+
+export const FinContainerItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 1rem;
+  max-height: 25rem;
+  overflow-y: auto;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    height: 80%;
+    margin: 2rem 0 0 0;
+  }
+
+  @media (min-width: 1024px) {
+    width: 60%;
+  }
+
+`;
+
+export const FinItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-left: 5px solid 
+    ${({ type }) => (type === "Entrada" ? "var(--color-secondary)" : "var(--grey-2)")};
+
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 `;
