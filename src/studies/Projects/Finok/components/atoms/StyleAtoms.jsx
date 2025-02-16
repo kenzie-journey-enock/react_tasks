@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Logo = styled.div`
   width: 5rem;
-  margin-left: 6rem;
+  margin-left: 1rem;
 
   img {
     width: 100%;
@@ -103,6 +103,69 @@ export const SelectStyled = styled.select`
     border: 2px solid var(--color-primary-2);
   }
 
+`;
+
+export const SelectLocaleFinokWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+`;
+
+export const SelectButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 100%;
+  img {
+    width: 30px;
+    height: 20px;
+    transition: width, height 0.3s ease;
+  }
+
+  &:hover {
+    img {
+      width: 40px;
+      height: 30px;
+    }
+  }
+`;
+
+export const SelectList = styled.ul`
+  list-style: none;
+  margin-top: 10rem;
+  padding: 0;
+  width: 150px;
+  max-height: 200px;
+  background-color: var(--grey-0);
+  border: 1px solid var(--grey-matte);
+  /* border-radius: 8px; */
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  overflow-x: hidden;
+`;
+
+export const SelectItem = styled.li`
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  img {
+    width: 30px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    background-color: var(--grey-1);
+  }
 `;
 
 export const LabelText = styled.label`
