@@ -1,23 +1,25 @@
 {
   "company_name": "Finok",
   "total": 0.00,
+  "totalStatus": "positive",
+  "locale": "pt-BR",
   "resume": [
     {
       "id": 1,
       "title": "Salario - Mês Janeiro",
-      "value": 3321.23,
+      "value": 3000.00,
       "type": "Entrada"
     },
     {
       "id": 2,
       "title": "Salario - Mês Fevereiro",
-      "value": 3000.42,
+      "value": 3000.00,
       "type": "Entrada"
     },
     {
       "id": 3,
       "title": "Salario - Mês Março",
-      "value": 3020.42,
+      "value": 3000.00,
       "type": "Entrada"
     },
     {
