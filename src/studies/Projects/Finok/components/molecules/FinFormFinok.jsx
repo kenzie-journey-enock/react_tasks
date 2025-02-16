@@ -15,6 +15,7 @@ export default function FinFormFinok({ setItem }) {
     type: "Entrada",
   });
 
+  // Definição da função handleChange para atualizar os campos do formData
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -28,15 +29,13 @@ export default function FinFormFinok({ setItem }) {
       return;
     }
 
-    setItem((prevItems) => [
-      ...prevItems,
-      {
-        id: prevItems.length + 1,
-        title: formData.title,
-        value: formatMoneyToFloat(formData.value),
-        type: formData.type
-      }
-    ]);
+    // Passa apenas o novo item para a função setItem
+    setItem({
+      id: Date.now().toString(),
+      title: formData.title,
+      value: formatMoneyToFloat(formData.value),
+      type: formData.type
+    });
 
     setFormData({ title: "", value: "", type: "Entrada" });
   };
