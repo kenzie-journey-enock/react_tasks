@@ -21,7 +21,6 @@ export default function SelectLocaleFinok({ currencyMap, currentLocale }) {
 
     const parsedData = storedData ? JSON.parse(storedData) : {};
     parsedData.locale = currentLocaleState;
-    console.log(parsedData.locale)
     localStorage.setItem('finokData', JSON.stringify(parsedData));
 
   }, [currentLocaleState]);

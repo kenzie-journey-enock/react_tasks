@@ -5,9 +5,7 @@ import { currencyMap, getLocale } from "../../../utils/currencyMap";
 import { ContainerHeader } from "./StyleMolecules";
 
 export default function ContainerHeaderFinok() {
-
   const currentLocale = getLocale();
-  console.log(currentLocale)
 
   return (
     <ContainerHeader>
