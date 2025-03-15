@@ -11,7 +11,6 @@ export default function InputLabelFinok({ type, name, value, onChange, example }
 
   useEffect(() => {
     setLocale(getLocale())
-    console.log(locale)
   }, [locale])
 
   const handleChange = (e) => {
@@ -29,13 +28,13 @@ export default function InputLabelFinok({ type, name, value, onChange, example }
       {type === 'text' && (
         <div>
           <LabelText htmlFor={name}>
-            <TextFinok styleToken="caption_bold">Descrição</TextFinok>
+            <TextFinok styleToken="caption_bold">Descripton</TextFinok>
           </LabelText>
           <input
             id={name}
             name={name}
             type="text"
-            placeholder="Digite aqui sua Descrição"
+            placeholder="Enter your description here..."
             value={value}
             onChange={handleChange}
           />
@@ -46,7 +45,7 @@ export default function InputLabelFinok({ type, name, value, onChange, example }
       {type === 'money' && (
         <div>
           <LabelText htmlFor={name}>
-            <TextFinok styleToken="caption_bold">Valor</TextFinok>
+            <TextFinok styleToken="caption_bold">Value</TextFinok>
           </LabelText>
           <input
             id={name}
@@ -62,11 +61,11 @@ export default function InputLabelFinok({ type, name, value, onChange, example }
       {type === 'select' && (
         <div>
           <LabelText htmlFor={name}>
-            <TextFinok styleToken="caption_bold">Tipo de valor</TextFinok>
+            <TextFinok styleToken="caption_bold">Value type</TextFinok>
           </LabelText>
           <SelectStyled id={name} name={name} value={value} onChange={onChange}>
-            <option value="Entrada">Entrada</option>
-            <option value="Despesa">Despesa</option>
+            <option value="Won">Won</option>
+            <option value="Spent">Spent</option>
           </SelectStyled>
         </div>
       )}
