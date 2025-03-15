@@ -9,6 +9,7 @@ import { FruitsList } from './08_FruitsList';
 import { StatesContactForm } from './09_StatesContactForm';
 import { RenderingSectionsConditionally } from './10_RenderingSectionsConditionally';
 import { ConditioningVisualComponent } from './11_ConditioningVisualComponent';
+import { FetchListFromAPI } from './12_FetchListFromAPI';
 
 export {
   MyFirstJSX,
@@ -21,6 +22,7 @@ export {
   FruitsList,
   StatesContactForm,
   RenderingSectionsConditionally,
-  ConditioningVisualComponent
+  ConditioningVisualComponent,
+  FetchListFromAPI
 
 }
