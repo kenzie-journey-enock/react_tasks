@@ -2,31 +2,31 @@
   "company_name": "Finok",
   "total": 0.00,
   "totalStatus": "positive",
-  "locale": "pt-BR",
+  "locale": "en-US",
   "resume": [
     {
       "id": 1,
-      "title": "Salario - Mês Janeiro",
+      "title": "Salary - Month January",
       "value": 3000.00,
-      "type": "Entrada"
+      "type": "Won"
     },
     {
       "id": 2,
-      "title": "Salario - Mês Fevereiro",
+      "title": "Salary - Month February",
       "value": 3000.00,
-      "type": "Entrada"
+      "type": "Won"
     },
     {
       "id": 3,
-      "title": "Salario - Mês Março",
+      "title": "Salary - Month March",
       "value": 3000.00,
-      "type": "Entrada"
+      "type": "Won"
     },
     {
       "id": 4,
       "title": "PC da Nasa.",
-      "value": 9000.00,
-      "type": "Despesa"
+      "value": 6000.00,
+      "type": "Spent"
     }
   ]
 }
