@@ -1,15 +1,16 @@
 import {
-  // Portifolio
-  Finok
-} from './studies/Projects'
+  //   ComponentSASS,
+  //   FruitsList,
+  //   RenderingSectionsConditionally,
+  //   StatesContactForm,
+  // ConditioningVisualComponent,
+  // FetchListFromAPI
+} from './studies/Tasks'
 
-// import {
-//   ComponentSASS,
-//   FruitsList,
-//   RenderingSectionsConditionally,
-//   StatesContactForm,
-//   ConditioningVisualComponent
-// } from './studies/Tasks'
+import {
+  // Portifolio
+  // Finok
+} from './studies/Projects'
 
 
 function App() {
@@ -24,9 +25,12 @@ function App() {
       < RenderingSectionsConditionally />
 
       <ConditioningVisualComponent /> */}
+      {/* <ConditioningVisualComponent />
+      <FetchListFromAPI /> */}
 
+      {/* PROJECTS */}
       {/* <Portifolio /> */}
-      <Finok />
+      {/* <Finok /> */}
 
 
     </>
