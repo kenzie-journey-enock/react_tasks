@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { FinItem } from './StyleMolecules';
+import { FinItem, FinTextItems, FinDeleteItemsBtn } from './StyleMolecules';
 
 import TextFinok from "../atoms/TextFinok";
 import BtnDeleteFinok from "../atoms/BtnDeleteFinok";
@@ -13,18 +13,21 @@ export default function FinItemFinok({ item, removeItem }) {
 
   useEffect(() => {
     setLocale(getLocale())
-    console.log(locale)
   }, [locale])
 
 
-  let status = item.type === 'Despesa' ? 'negative' : 'positive'
+  let status = item.type === 'Spent' ? 'negative' : 'positive'
 
   return (
     <FinItem type={item.type}>
-      <TextFinok styleToken='title3'>{item.title}</TextFinok>
-      <TextFinok styleToken='caption'>{item.type}</TextFinok>
-      <TextFinok styleToken='body'>{formatFloatToMoney(item.value, status, locale)}</TextFinok>
-      <BtnDeleteFinok onClick={() => removeItem(item.id)} />
+      <FinTextItems>
+        <TextFinok styleToken='title3'>{item.title}</TextFinok>
+        <TextFinok styleToken='caption'>{item.type}</TextFinok>
+      </FinTextItems>
+      <FinDeleteItemsBtn>
+        <TextFinok styleToken='caption'>{formatFloatToMoney(item.value, status, locale)}</TextFinok>
+        <BtnDeleteFinok onClick={() => removeItem(item.id)} />
+      </FinDeleteItemsBtn>
     </FinItem>
   );
 }

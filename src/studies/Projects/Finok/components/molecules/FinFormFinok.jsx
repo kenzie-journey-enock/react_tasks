@@ -12,7 +12,7 @@ export default function FinFormFinok({ setItem }) {
   const [formData, setFormData] = useState({
     title: "",
     value: "",
-    type: "Entrada",
+    type: "Won",
   });
 
   // Definição da função handleChange para atualizar os campos do formData
@@ -25,7 +25,7 @@ export default function FinFormFinok({ setItem }) {
     e.preventDefault();
 
     if (!formData.title || !formData.value) {
-      alert("Preencha todos os campos!");
+      alert("Fill the fields to insert...");
       return;
     }
 
@@ -37,7 +37,7 @@ export default function FinFormFinok({ setItem }) {
       type: formData.type
     });
 
-    setFormData({ title: "", value: "", type: "Entrada" });
+    setFormData({ title: "", value: "", type: "Won" });
   };
 
   return (
@@ -45,7 +45,7 @@ export default function FinFormFinok({ setItem }) {
       <InputLabelFinok
         type='text'
         name="title"
-        example='Ex: Compra de Roupas'
+        example='Ex: Market shopping'
         value={formData.title}
         onChange={handleChange}
       />
@@ -62,7 +62,7 @@ export default function FinFormFinok({ setItem }) {
         onChange={handleChange}
       />
       <BtnFinok type='submit'>
-        <TextFinok styleToken='body'>Inserir Valor</TextFinok>
+        <TextFinok styleToken='body'>Insert Value</TextFinok>
       </BtnFinok>
     </FinForm>
   );

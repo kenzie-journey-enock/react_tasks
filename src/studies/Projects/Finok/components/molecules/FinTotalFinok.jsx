@@ -5,20 +5,24 @@ import TextFinok from "../atoms/TextFinok"
 import { formatFloatToMoney } from "../../../utils/formatMoney"
 import { getLocale } from '../../../utils/currencyMap';
 
+import { FinTotal } from './StyleMolecules';
+
 export default function FinTotalFinok({ total, totalStatus }) {
   const [locale, setLocale] = useState(getLocale());
 
   useEffect(() => {
     setLocale(getLocale())
-    console.log(locale)
   }, [locale])
 
 
   return (
-    <div>
-      <TextFinok styleToken='title3'>Valor Total</TextFinok>
-      <TextFinok styleToken='body'>{formatFloatToMoney(total, totalStatus, locale)}</TextFinok>
-    </div>
+    <FinTotal>
+      <div>
+        <TextFinok styleToken='title3'>Total Value</TextFinok>
+        <TextFinok styleToken='caption'>Value refers to the balance</TextFinok>
+      </div>
+      <TextFinok styleToken='title4'>{formatFloatToMoney(total, totalStatus, locale)}</TextFinok>
+    </FinTotal>
   )
 }
 
