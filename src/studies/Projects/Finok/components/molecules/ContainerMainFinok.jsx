@@ -1,74 +1,68 @@
-import { useState, useEffect } from 'react'
-import { ContainerMain } from './StyleMolecules'
+import { useState, useEffect, useMemo } from 'react';
+import { ContainerMain, ContainerOrganize } from './StyleMolecules';
 
-import FinFormFinok from './FinFormFinok'
-import FinSummaryFinok from './FinSummaryFinok'
+import FinFormFinok from './FinFormFinok';
+import FinSummaryFinok from './FinSummaryFinok';
 
-import data_mock from "../../data_finok.json"
-import FinTotalFinok from './FinTotalFinok'
+import data_mock from '../../data_finok.json';
+import FinTotalFinok from './FinTotalFinok';
 
 export default function ContainerMainFinok() {
-  // Carregar os dados do localStorage ou usar o JSON inicial
   const [data, setData] = useState(() => {
-    const storedData = localStorage.getItem("finokData");
-    return storedData ? JSON.parse(storedData) : data_mock;
+    const storedData = localStorage.getItem('finokData');
+    const parsedData = storedData ? JSON.parse(storedData) : data_mock;
+    return {
+      ...parsedData,
+      resume: Array.isArray(parsedData.resume) ? parsedData.resume : [],
+    };
   });
 
-  // Atualiza o LocalStorage sempre que data mudar
-  useEffect(() => {
-    localStorage.setItem("finokData", JSON.stringify(data));
-  }, [data]);
-
-  useEffect(() => {
-    const updatedTotal = data.resume.reduce((acc, item) => {
-      if (item.type === "Entrada") {
-        return acc + item.value;
-      } else if (item.type === "Despesa") {
-        return acc - item.value;
+  const total = useMemo(() => {
+    let testTotal = 0;
+    (data.resume ?? []).forEach((item) => {
+      if (item.type === 'Won') {
+        testTotal += item.value
+      } else {
+        testTotal -= item.value
       }
-      return acc;
-    }, 0);
-
-    const roundedTotal = Math.round(updatedTotal * 100) / 100;
-
-    const totalStatus = roundedTotal >= 0 ? "positive" : "negative";
-
-    setData((prev) => ({
-      ...prev,
-      total: roundedTotal,
-      totalStatus: totalStatus
-    }));
+    });
+    return testTotal;
   }, [data.resume]);
 
-  // Função para adicionar um novo item ao resumo e recalcular o total
-  const addItem = (newItem) => {
-    console.log('newItem --------------->', newItem);
+  const totalStatus = total >= 0 ? 'positive' : 'negative';
 
-    // Adiciona o novo item à lista
-    const updatedResume = [...data.resume, newItem];
+  useEffect(() => {
+    localStorage.setItem('finokData', JSON.stringify({ ...data, total }));
+  }, [data.resume]);
 
-    // Atualiza o estado
+  useEffect(() => {
     setData((prev) => ({
       ...prev,
-      resume: updatedResume
+      resume: [...prev.resume],
+    }));
+  }, []);
+
+  const addItem = (newItem) => {
+    setData((prev) => ({
+      ...prev,
+      resume: [...prev.resume, newItem],
     }));
   };
 
   const removeItem = (id) => {
-    const updatedResume = data.resume.filter((item) => item.id !== id);
-
     setData((prev) => ({
       ...prev,
-      resume: updatedResume
+      resume: prev.resume.filter((item) => item.id !== id),
     }));
   };
 
-
   return (
     <ContainerMain>
-      <FinFormFinok setItem={addItem} />
-      <FinTotalFinok total={data.total} totalStatus={data.totalStatus} />
+      <ContainerOrganize>
+        <FinFormFinok setItem={addItem} />
+        <FinTotalFinok total={total} totalStatus={totalStatus} />
+      </ContainerOrganize>
       <FinSummaryFinok items={data.resume} removeItem={removeItem} />
     </ContainerMain>
-  )
+  );
 }
