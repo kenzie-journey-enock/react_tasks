@@ -26,7 +26,8 @@ export const ContainerFooter = styled.div`
   width: 100%;
   height: 14vh;
   background-color: var(--grey-3);
-
+  margin-top: 1rem;
+  padding-top: 1rem;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-around;
@@ -40,13 +41,15 @@ export const ContainerFooter = styled.div`
 
 export const ContainerMain = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  /* background-color: aquamarine; */
 
   @media (min-width: 768px) {
+    flex-direction: row;
     width: 90%;
     align-items: flex-start;
     margin-top: 2rem;
@@ -62,23 +65,39 @@ export const ContainerMain = styled.div`
   }
 `;
 
+export const ContainerOrganize = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: aquamarine; */
+  width: 90%;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    margin-right: 1rem;
+  }
+
+`
+
 export const FinForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   padding: 2rem 1.5rem;
-  margin: 2rem 1rem 1rem 1rem;
+  margin: 1rem 0rem 2rem 0rem;
   border: 1px solid var(--grey-matte);
 
   @media (min-width: 768px) {
-    width: 40%;
-    height: 80%;
-    margin: 2rem 0 0 0;
+    /* width: 100%; */
+    height: 70%;
+    margin: 0rem 0 1rem 0;
   }
 
   @media (min-width: 1024px) {
-    width: 30%;
+    /* width: 30%; */
   }
 
   @media (min-width: 1840px) {
@@ -86,16 +105,41 @@ export const FinForm = styled.form`
   }
 `;
 
+export const FinTotal = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 2rem;
+  /* margin: 1rem 0 0 0; */
+  /* margin: 2rem 1rem 1rem 1rem; */
+  border: 1px solid var(--grey-matte);
+
+  @media (min-width: 768px) {
+    /* width: 40%; */
+    height: 20%;
+    margin: 0;
+  }
+
+  @media (min-width: 1024px) {
+    /* width: 30%; */
+  }
+
+  @media (min-width: 1840px) {
+  }
+`;
+
 export const FinSummary = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   margin: 1rem;
+  /* background-color: blueviolet; */
 
   @media (min-width: 768px) {
     width: 50%;
-    height: 80%;
-    margin: 2rem 0 0 0;
+    /* height: 80%; */
+    /* margin: 2rem 0 0 0;: */
   }
 
   @media (min-width: 1024px) {
@@ -106,30 +150,61 @@ export const FinSummary = styled.div`
 export const FinContainerItems = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
+  /* width: 100rem; */
   margin: 1rem;
   max-height: 25rem;
   overflow-y: auto;
+  /* background-color: burlywood; */
 
   @media (min-width: 768px) {
-    width: 50%;
+    /* width: 50%; */
     height: 80%;
     margin: 2rem 0 0 0;
   }
 
   @media (min-width: 1024px) {
-    width: 60%;
+    /* width: 60%; */
   }
 
 `;
 
-export const FinItem = styled.div`
+export const FinTextItems = styled.div`
   display: flex;
   flex-direction: column;
-  border-left: 5px solid 
-    ${({ type }) => (type === "Entrada" ? "var(--color-secondary)" : "var(--grey-2)")};
+`
 
+export const FinDeleteItemsBtn = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* background-color: aquamarine; */
   @media (min-width: 768px) {
+    width: 20%;
+    align-items: center;
+    span {
+      margin-bottom: 0.5rem;
+    }
+    
+    margin-right: 1rem;
+    
+    
+  }
+`
+
+export const FinItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-left: 5px solid
+    ${({ type }) => (type === "Won" ? "var(--color-secondary)" : "var(--grey-2)")};
+
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  padding: 1rem 0 1rem 1rem;
+  p, span {
+    margin-top: 0.5rem;
+  }
+  
+  @media (min-width: 888px) {
     flex-direction: row;
   }
 `;

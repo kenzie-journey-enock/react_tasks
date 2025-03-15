@@ -51,14 +51,20 @@ export const Btn = styled.button`
 `;
 
 export const BtnDelete = styled.button`
-  width: 100%;
+  width: 30%;
   background-color: var(--grey-matte);
   color: var(--grey-4);
   transition: all 0.3s ease;
+  margin-top: 0.6rem;
 
   &:hover {
     background-color: var(--color-primary-2);
     color: var(--grey-0);
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    margin-top: 0;
   }
 `;
 
@@ -196,6 +202,7 @@ export const TxtTitle4 = styled.h4`
   font-weight: 700;
   font-size: 1rem;
   line-height: 23.4px;
+  color: var(--color-primary);
 `;
 
 export const TxtHeadline = styled.p`
