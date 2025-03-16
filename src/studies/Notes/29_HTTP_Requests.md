@@ -24,4 +24,4 @@ The response is the server's feedback regarding the request. It can be successfu
 ## Conclusion  
 In this lesson, I learned what the HTTP protocol is and how it facilitates communication between clients and servers. Understanding the basics of HTTP is essential for building efficient and interactive web applications. In future lessons, I will explore handling HTTP requests in JavaScript and React.  
 
-To better understand HTTP requests, I can download and explore **Insomnia**, a useful tool for testing APIs: [Insomnia Documentation](https://insomnia.rest/).
+Tool for test: [Insomnia Documentation](https://insomnia.rest/).
