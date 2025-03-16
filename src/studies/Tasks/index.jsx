@@ -10,6 +10,9 @@ import { StatesContactForm } from './09_StatesContactForm';
 import { RenderingSectionsConditionally } from './10_RenderingSectionsConditionally';
 import { ConditioningVisualComponent } from './11_ConditioningVisualComponent';
 import { FetchListFromAPI } from './12_FetchListFromAPI';
+import { FetchWithUseEffect } from './13_FetchWithUseEffect';
+import { FetchWithUseEffectAndLocalStorage } from './14_FetchWithUseEffectAndLocalStorage';
+import { FetchViaCEP } from './15_FetchViaCEP';
 
 export {
   MyFirstJSX,
@@ -23,6 +26,8 @@ export {
   StatesContactForm,
   RenderingSectionsConditionally,
   ConditioningVisualComponent,
-  FetchListFromAPI
-
+  FetchListFromAPI,
+  FetchWithUseEffect,
+  FetchWithUseEffectAndLocalStorage,
+  FetchViaCEP
 }

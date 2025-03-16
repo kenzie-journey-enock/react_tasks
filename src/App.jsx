@@ -4,7 +4,10 @@ import {
   //   RenderingSectionsConditionally,
   //   StatesContactForm,
   // ConditioningVisualComponent,
-  // FetchListFromAPI
+  // FetchListFromAPI,
+  // FetchWithUseEffect,
+  // FetchWithUseEffectAndLocalStorage,
+  FetchViaCEP
 } from './studies/Tasks'
 
 import {
@@ -23,10 +26,15 @@ function App() {
       <FruitsList />
       <StatesContactForm />
       < RenderingSectionsConditionally />
-
-      <ConditioningVisualComponent /> */}
+ */}
       {/* <ConditioningVisualComponent />
       <FetchListFromAPI /> */}
+
+      {/* <FetchWithUseEffect /> */}
+
+      {/* <FetchWithUseEffectAndLocalStorage /> */}
+
+      <FetchViaCEP />
 
       {/* PROJECTS */}
       {/* <Portifolio /> */}
