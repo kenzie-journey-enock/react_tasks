@@ -7,13 +7,10 @@ import {
   // FetchListFromAPI,
   // FetchWithUseEffect,
   // FetchWithUseEffectAndLocalStorage,
-  FetchViaCEP
+  // FetchViaCEP
 } from './studies/Tasks'
 
-import {
-  // Portifolio
-  // Finok
-} from './studies/Projects'
+import { NockBurguer } from './studies/Projects'
 
 
 function App() {
@@ -34,11 +31,12 @@ function App() {
 
       {/* <FetchWithUseEffectAndLocalStorage /> */}
 
-      <FetchViaCEP />
+      {/* <FetchViaCEP /> */}
 
       {/* PROJECTS */}
       {/* <Portifolio /> */}
       {/* <Finok /> */}
+      <NockBurguer />
 
 
     </>
