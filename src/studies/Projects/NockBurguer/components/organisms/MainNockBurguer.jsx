@@ -11,6 +11,9 @@ export default function MainFinok() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+
+    const cart = JSON.parse(localStorage.getItem("cart"));
+
     const fetchListProducts = async () => {
       const data = await fetchData();
 
@@ -34,15 +37,21 @@ export default function MainFinok() {
     return <p>Error: {error} ❌</p>;
   }
 
+
+
   return (
     <MainNockBurguerStyle>
       <ListProductsStyle>
         {products.map(product => (
-          <CardNockBurguer key={product.id}
+          <CardNockBurguer
+            key={product.id}
+            id={product.id}
             img={product.img}
             name={product.name}
             category={product.category}
-            price={product.price} />
+            price={product.price}
+          />
+
         ))}
       </ListProductsStyle>
     </MainNockBurguerStyle>
