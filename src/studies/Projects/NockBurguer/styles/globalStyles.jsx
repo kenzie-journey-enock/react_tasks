@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 
   :root {
-    --color-primary: #FD377E;
-    --color-primary-2: #E34981;
+    --color-primary: #27AE60;
+    --color-primary-2: #EB5757;
     --color-secondary: #03B898;
     --color-secondary-50: #E5F8F0;
     --color-tertiary: #FF577F;
@@ -12,10 +12,12 @@ const GlobalStyle = createGlobalStyle`
     --color-quaternary: #506CCF;
     --color-quaternary-50: #E5E9F8;
 
-    --grey-0: #FFFFFF;
+    --light: #FFFFFF;
+
+    --grey-0: #F5F5F5;
     --grey-1: #F8F9FA;
     --grey-2: #E9ECEF;
-    --grey-3: #868E96;
+    --grey-3: #828282;
     --grey-4: #212529;
 
     --grey-100: #E0E0E0;
@@ -35,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 28px;
     color: var(--grey-4);
     max-height: 100vh;
-    width: 100vw;
+    /* background-color: #03B898; */
     overflow-x: hidden;
     
     @media (min-width: 768px) {
@@ -43,8 +45,17 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  div#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* width: 100vw; */
+    height: 100vh;
+  }
+
   section {
-    height: 90vh;
+    /* height: 90vh; */
   }
 
   ::-webkit-scrollbar {
