@@ -25,8 +25,8 @@ export const CardNockBurguerStyle = styled.li`
   transition: all 0.2s ease;
 
   &:hover {
-    width: 16rem;
-    height: 21rem;
+    width: 15.5rem;
+    height: 20.5rem;
   }
 
   h3 {
