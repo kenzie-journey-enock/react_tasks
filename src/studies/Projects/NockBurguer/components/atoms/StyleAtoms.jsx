@@ -50,3 +50,27 @@ export const BtnAddNockBurguerStyle = styled.button`
     background-color: var(--color-primary-2);
   }
 `
+
+export const IconCartNockBurguerStyle = styled.div`
+  position: relative;
+  width: fit-content;
+
+  cursor: pointer;
+
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 8px;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1;
+  }
+`;
