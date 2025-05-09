@@ -1,9 +1,13 @@
+import IconCartNockBurguer from "../atoms/IconCartNockBurguer";
+import LogoNockBurguer from "../atoms/LogoNockBurguer";
+
+import { ContainerHeaderNockBurguerStyle } from "./StyleMolecules";
+
 export default function ContainerHeaderNockBurguer() {
   return (
-    <div>
-      <h1>Nock Burguer</h1>
-
-      <p>ICON CART</p>
-    </div>
+    <ContainerHeaderNockBurguerStyle>
+      <LogoNockBurguer />
+      <IconCartNockBurguer />
+    </ContainerHeaderNockBurguerStyle>
   )
 }
