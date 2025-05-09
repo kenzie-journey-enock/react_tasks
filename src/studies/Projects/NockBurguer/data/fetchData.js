@@ -1,8 +1,12 @@
 import axios from 'axios';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import data_nockburguer from './data_nockburguer.json'
 
-export const fetchData = async (url = data_nockburguer.url_api, method = "GET", body = null) => {
+export const fetchData = async (
+  // url = data_nockburguer.url_api,
+  url = "",
+  method = "GET",
+  body = null) => {
   try {
     const response = await axios({
       url,
@@ -12,6 +16,10 @@ export const fetchData = async (url = data_nockburguer.url_api, method = "GET", 
       },
       data: body
     });
+
+    if (typeof response.data == 'string') {
+      return data_nockburguer.mock_data
+    }
 
     return response.data;
   } catch (error) {
