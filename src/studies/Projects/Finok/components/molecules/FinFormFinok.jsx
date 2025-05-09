@@ -6,7 +6,7 @@ import BtnFinok from "../atoms/BtnFinok";
 import InputLabelFinok from "../atoms/InputLabelFinok";
 import TextFinok from "../atoms/TextFinok";
 
-import { formatMoneyToFloat } from '../../../utils/formatMoney';
+import { formatMoneyToFloat } from '../../utils/formatMoney';
 
 export default function FinFormFinok({ setItem }) {
   const [formData, setFormData] = useState({

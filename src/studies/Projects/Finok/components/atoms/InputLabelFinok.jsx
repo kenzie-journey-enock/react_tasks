@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { InputLabel, LabelText, SelectStyled } from './StyleAtoms';
 import TextFinok from './TextFinok';
-import formatMoneyInput from '../../../utils/formatMoneyInput';
-import { formatMoneyByLocale } from '../../../utils/formatMoney';
-import { getLocale } from '../../../utils/currencyMap';
+import formatMoneyInput from '../../utils/formatMoneyInput';
+import { formatMoneyByLocale } from '../../utils/formatMoney';
+import { getLocale } from '../../utils/currencyMap';
 import { useEffect, useState } from 'react';
 
 export default function InputLabelFinok({ type, name, value, onChange, example }) {

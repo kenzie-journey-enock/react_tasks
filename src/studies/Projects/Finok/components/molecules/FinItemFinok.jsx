@@ -5,8 +5,8 @@ import { FinItem, FinTextItems, FinDeleteItemsBtn } from './StyleMolecules';
 import TextFinok from "../atoms/TextFinok";
 import BtnDeleteFinok from "../atoms/BtnDeleteFinok";
 
-import { formatFloatToMoney } from '../../../utils/formatMoney';
-import { getLocale } from '../../../utils/currencyMap';
+import { formatFloatToMoney } from '../../utils/formatMoney';
+import { getLocale } from '../../utils/currencyMap';
 
 export default function FinItemFinok({ item, removeItem }) {
   const [locale, setLocale] = useState(getLocale());

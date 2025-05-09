@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TextFinok from "../atoms/TextFinok"
 
-import { formatFloatToMoney } from "../../../utils/formatMoney"
-import { getLocale } from '../../../utils/currencyMap';
+import { formatFloatToMoney } from "../../utils/formatMoney"
+import { getLocale } from '../../utils/currencyMap';
 
 import { FinTotal } from './StyleMolecules';
 
