@@ -1,11 +1,8 @@
-
-import LogoNockBurguer from "../atoms/LogoNockBurguer"
 import { ContactsLinkNockBurguerStyle, FooterNockBurguerStyle } from "./StyleOrganisms"
 
 export default function FooterNockBurguer() {
   return (
     <FooterNockBurguerStyle>
-      <LogoNockBurguer />
       <p>Made by Enock</p>
       <ContactsLinkNockBurguerStyle>
         <a
