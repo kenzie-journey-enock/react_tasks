@@ -1,16 +1,25 @@
 import PropTypes from "prop-types";
 import { getNameImgFile } from "../../utils/getNameImgFile";
+import { formatMoney } from '../../utils/formatMoney';
+import { CardNockBurguerStyle, ImgCardProductNockBurguerStyle, InfoCardProductNockBurguerStyle } from "./StyleMolecules";
+import BtnAddNockBurguer from "../atoms/BtnAddNockBurguer";
 
 export default function CardNockBurguer({ name, category, price, img }) {
   const imgName = getNameImgFile(img);
+  const priceMoney = formatMoney(price);
 
   return (
-    <li style={{ border: "1px solid #ccc", borderRadius: "8px", padding: "16px", maxWidth: "300px" }}>
-      <img src={`https://raw.githubusercontent.com/kenzie-journey-enock/react_tasks/refs/heads/main/src/studies/Projects/NockBurguer/assets/${imgName}`} alt={name} style={{ width: "100%", borderRadius: "8px" }} />
-      <h2>{name} 🍔</h2>
-      <p>Category: {category}</p>
-      <p>Price: ${price}</p>
-    </li>
+    <CardNockBurguerStyle>
+      <ImgCardProductNockBurguerStyle>
+        <img src={`/react_tasks/assets/project_nockburguer/${imgName}`} alt={name} style={{ width: "100%", borderRadius: "8px" }} />
+      </ImgCardProductNockBurguerStyle>
+      <InfoCardProductNockBurguerStyle>
+        <h3>{name}</h3>
+        <p>{category}</p>
+        <span>{priceMoney}</span>
+        <BtnAddNockBurguer />
+      </InfoCardProductNockBurguerStyle>
+    </CardNockBurguerStyle>
   );
 }
 
